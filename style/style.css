@@ -3,11 +3,15 @@
     src: url('../fonts/onepiecefont.ttf');
   }
 
-body{
+body, html{
     background-color: black;
+
 }
 .container{
-    height: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .cardContainer{
     display: flex;
@@ -21,18 +25,54 @@ body{
 
 .points{
     font-family: 'onePiece';
-    font-size: 30px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     color: white;
     justify-content: center;
     position: sticky;
     top: 0;
-background-color: rgba(0, 0, 0, 0.418);}
+    background-color: rgba(0, 0, 0, 0.418);
+}
 
 .clicks{
     display: flex;
     align-items: center;
     color: white;
     justify-content: center;
+}
+@media (min-width:280px) and (max-width:375px) {
+    .card{
+       width: 100px;
+    } 
+    .points{
+      font-size: 12px;
+    }
+}
+@media (min-width:375px) and (max-width:479px) {
+    .card{
+       width: 110px;
+    } 
+    .points{
+      font-size: 15px;
+    }
+
+}
+@media (min-width:480px) and (max-width:765px) {
+    .card{
+       width: 140px;
+    } 
+    .points{
+      font-size: 17px;
+    }
+
+}
+@media (min-width:765px) and (max-width:815px){
+    .card{
+       width: 150px;
+    } 
+    .points{
+      font-size: 18px;
+    }
+
 }
