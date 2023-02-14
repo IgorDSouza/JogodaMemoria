@@ -1,5 +1,7 @@
-const container = document.querySelector('.container');
+const container = document.querySelector('.cardContainer');
 const points = document.getElementById('points');
+const clicks = document.getElementById('clicks');
+var click = 0;
 var random = 0;
 var tmp;
 var cards = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
@@ -47,11 +49,24 @@ function matchCards() {
 
         let equalCard = document.querySelectorAll(`.c${cardId}`);
 
+   
 
         equalCard.forEach(e => {
+
+            e.addEventListener('click', ()=>{
+                if(!e.classList.contains('ok')){
+                     click++;
+                clicks.innerHTML= click;
+                }
+            });
+
             e.addEventListener("click", () => {
                 e.classList.add('ok');
                 e.src = `img/${cardId}.png`;
+
+
+                
+
                 let time = 1000;
 
                 setTimeout(() => {
