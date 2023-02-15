@@ -79,13 +79,17 @@ function matchCards() {
                     if (equalCard[0].classList.contains("ok") && equalCard[1].classList.contains("ok")) {
 
 
-                        if (!matchs.find((name) => { return name == e.className.slice(-4, e.className.length - 2) })) {
+                        if (!matchs.find((name) => { return name == e.className.slice(-6, e.className.length - 2) })) {
 
-                            matchs.push(e.className.slice(-4, e.className.length - 2))
+                            matchs.push(e.className.slice(-6, e.className.length - 2))
+
                             matchs.push(e.className.slice(-2, e.className.length))
+
                             let qtdMatchs = matchs.filter((qtd) => { return qtd == 'ok' }).length;
 
                             points.innerHTML = qtdMatchs 
+
+                            console.log(matchs)
 
 
                             if (qtdMatchs  == card.length / 2) {
@@ -128,7 +132,6 @@ function qtdCards(){
         cards.push(i);
         cards.push(i);
 
-        console.log(cards)
     }
     chooseQtd.style.display='none';
 
