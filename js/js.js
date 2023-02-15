@@ -1,21 +1,25 @@
 const container = document.querySelector('.cardContainer');
 const points = document.getElementById('points');
 const clicks = document.getElementById('clicks');
+const chooseQtd = document.querySelector('.chooseQtd');
+const btnSend = document.querySelector('.send');
+const qtdRadio = document.querySelectorAll('.qtd');
+var time = 1000;
+var numberCards = 0;
 var click = 0;
 var random = 0;
 var tmp;
-var cards = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6];
+var cards = [];
 var matchs = [];
 
 
+qtdCards();
 
-randomCards();
 
-var card = document.querySelectorAll(".card");
 
-flag();
 
-matchCards();
+
+
 
 
 function randomCards() {
@@ -30,7 +34,7 @@ function randomCards() {
         cards[i] = tmp;
     }
 
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < cards.length; i++) {
 
         let img = document.createElement('img');
 
@@ -43,6 +47,7 @@ function randomCards() {
 }
 
 function matchCards() {
+    var card = document.querySelectorAll(".card");
     card.forEach((element) => {
 
         let cardId = element.className.replace("card c", "");
@@ -67,7 +72,7 @@ function matchCards() {
 
                 
 
-                let time = 1000;
+                
 
                 setTimeout(() => {
 
@@ -99,8 +104,39 @@ function matchCards() {
         })
     })
 }
+
 function flag() {
+    var card = document.querySelectorAll(".card");
     card.forEach((element) => {
         element.src = 'img/flag.png';
     });
+
+}
+function qtdCards(){
+    let number;
+    btnSend.addEventListener('click',()=>{
+
+       if(qtdRadio[0].checked){
+        number = 6;
+
+       } else if(qtdRadio[1].checked){
+        number = 12;
+
+       }
+
+        for(let i = 1 ; i<number+1; i++){
+        cards.push(i);
+        cards.push(i);
+
+        console.log(cards)
+    }
+    chooseQtd.style.display='none';
+
+    randomCards();
+    flag();
+    matchCards();
+
+    
+    })
+    
 }

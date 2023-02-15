@@ -18,9 +18,11 @@ body, html{
     justify-content: center;
     align-items: center;
     flex-wrap:wrap;
+    width: 70vw;
 }
 .card{
     padding: 5px;
+    width: 160px;
 }
 
 .points{
@@ -41,12 +43,45 @@ body, html{
     color: white;
     justify-content: center;
 }
+.chooseQtd{
+    font-family: 'onePiece';
+    text-align: center;
+    letter-spacing: 1px;
+    width: 98%;
+    height: 98%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    z-index: 10;
+    background-color: #000000bd;
+}
+#qtd{
+    font-size: 34px ;
+}
+input , label{
+    cursor: pointer;
+
+}
+.send{
+    font-family: 'onePiece';
+    font-size: 50px ;
+    border-radius: 15px;
+    cursor: pointer;
+
+
+}
 @media (min-width:280px) and (max-width:375px) {
     .card{
        width: 100px;
     } 
     .points{
       font-size: 12px;
+    }
+    .cardContainer{
+        width: 95vw;
     }
 }
 @media (min-width:375px) and (max-width:479px) {
@@ -55,6 +90,9 @@ body, html{
     } 
     .points{
       font-size: 15px;
+    }
+    .cardContainer{
+        width: 95vw;
     }
 
 }
@@ -65,7 +103,9 @@ body, html{
     .points{
       font-size: 17px;
     }
-
+    .cardContainer{
+        width: 95vw;
+    }
 }
 @media (min-width:765px) and (max-width:815px){
     .card{

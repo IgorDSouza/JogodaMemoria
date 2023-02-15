@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,41 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Jogo da Memoria OnePiece</title>
 </head>
+
 <body>
+    <div class="chooseQtd">
+        <img src="img/nika.png">
+        <h1>Nika's Memory Game</h1>
+        <h2>Escolha a quantidade de cards desejada</h2>
+        <div id="qtd">
 
-<div class="container">
+            <input type="radio" name="qtd" class='qtd' id="qtd12"> <label for="qtd12"> 12 Cards </label> 
 
-    <div class="points">
-        <h1>Pontos : &nbsp;</h1>
-        <h1 id="points"></h1>
+            <input type="radio" name="qtd"class='qtd'  id="qtd24"> <label for="qtd24"> 24 Cards </label> 
+        
+        </div> <br>
 
-        <h1> &nbsp; &nbsp; Clicks : &nbsp;</h1>
-        <h1 id="clicks"></h1>
+        <button class="send">Enviar</button>
+
     </div>
 
-    <div class="cardContainer">
- 
+    <div class="container">
 
+        <div class="points">
+            <h1>Pontos : &nbsp;</h1>
+            <h1 id="points"></h1>
+
+            <h1> &nbsp; &nbsp; Clicks : &nbsp;</h1>
+            <h1 id="clicks"></h1>
+        </div>
+
+        <div class="cardContainer">
+
+
+        </div>
     </div>
-</div>
-    
+
     <script src="js/js.js"></script>
 </body>
+
 </html>
